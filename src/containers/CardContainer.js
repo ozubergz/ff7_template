@@ -3,7 +3,7 @@
 
 import React, { Component } from "react";
 import data from "../db";
-// import 
+import Card from "../components/Card";
 
 class CardContainer extends Component {
 
@@ -23,8 +23,9 @@ class CardContainer extends Component {
         {
           this.state.characters.map(character => {
             // use Card component pass each character as props
-           return <h1>{}</h1>
-            // return <CardConta
+            // pass handleClick as props
+          //  return <h1>{}</h1>
+            return <Card character={character} handleClick={this.props.handleClick} />
           })
         }
       </div>
