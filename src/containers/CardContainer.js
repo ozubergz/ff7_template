@@ -22,7 +22,7 @@ class CardContainer extends Component {
       <div className="card-container">
         {
           this.state.characters.map(character => {
-            return <h1>{character.name}</h1>
+            return <h1>{}</h1>
           })
         }
       </div>
