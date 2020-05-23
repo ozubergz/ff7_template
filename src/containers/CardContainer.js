@@ -22,8 +22,6 @@ class CardContainer extends Component {
       <div className="card-container">
         {
           this.state.characters.map(character => {
-            // use Card component pass each character and handleClick as props
-            // set key as character's id
             return <h1>{character.name}</h1>
           })
         }
