@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Modal = (props) => {
-  const { character, handleCloseClick } = props;
+  const { character, handleClose } = props;
   return(
     <div className="modal">
       <div className="modal-box">
@@ -25,7 +25,7 @@ const Modal = (props) => {
             <h4>Summary:</h4>
             <p>{character.summary}</p>
           </div>
-          <button onClick={handleCloseClick}>CLOSE</button>
+          <button onClick={handleClose}>CLOSE</button>
         </div>
       </div>     
     </div>

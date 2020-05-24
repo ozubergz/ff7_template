@@ -1,9 +1,6 @@
-// step 1: import Card Component
-// step 2: render Card Component inside map method
-// step 3: pass character, handleClick and set key as character.id
-
 import React, { Component } from "react";
 import data from "../db";
+//Here! import Card component here
 
 class CardContainer extends Component {
 
@@ -22,6 +19,7 @@ class CardContainer extends Component {
       <div className="card-container">
         {
           this.state.characters.map(character => {
+            // HERE! return <Card /> component with assigned props character and props handleClick
             return <h1>{}</h1>
           })
         }

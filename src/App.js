@@ -4,9 +4,11 @@
 // step 4: pass handleClose function to Modal component as props
 
 import React from "react";
-import CardContainer from "./containers/CardContainer";
 import "./styles.css";
+import CardContainer from "./containers/CardContainer";
+
 import Modal from "./components/Modal";
+import Banner from "./components/Banner";
 
 class App extends React.Component {
 
@@ -20,18 +22,32 @@ class App extends React.Component {
       character: character,
       showModal: true
     });
-  };
+  }
+
+  handleClose = () => {
+    this.setState({
+      showModal: false
+    });
+  }
   
   render() {
     return (
         <div className="App">
-          {/* insert Banner here */}
+          <Banner />
           
           <CardContainer 
             handleClick={this.handleClick}
           />
 
-          {this.state.showModal ? <Modal character={this.state.character} /> : null}
+          {
+            this.state.showModal ?
+              <Modal 
+                character={this.state.character}
+                // pass handleClose function as props
+              /> 
+                : 
+              null
+          }
           
         </div>
     );
