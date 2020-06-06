@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import data from "../db";
-//Here! import Card component here
 import Card from "../components/Card";
 
 class CardContainer extends Component {
