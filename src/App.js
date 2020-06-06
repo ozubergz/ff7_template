@@ -36,8 +36,9 @@ class App extends React.Component {
           {
             this.state.showModal ?
               <Modal 
+              //pass handleClose function as props
+
                 character={this.state.character}
-                // pass handleClose function as props
               /> 
                 : 
               null
